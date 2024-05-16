@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Art & Voyage{% endblock %}
+
+{% block body %}
+    <h1 class="text-center" style="color: green">Créer un nouveau Contact</h1>
+
+    {{ include('contact/_form.html.twig') }}
+
+    <a class="btn btn-primary" href="{{ path('app_contact_index') }}">retour à la liste</a>
+{% endblock %}

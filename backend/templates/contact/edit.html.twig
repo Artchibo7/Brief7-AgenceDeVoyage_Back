@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Art & Voyage{% endblock %}
+
+{% block body %}
+    <h1 class="text-center" style="color: green">Editer Contact</h1>
+
+    {{ include('contact/_form.html.twig', {'button_label': 'Appliqer'}) }}
+
+    <a class="btn btn-primary" href="{{ path('app_contact_index') }}">retour à la liste</a>
+
+    {{ include('contact/_delete_form.html.twig') }}
+{% endblock %}

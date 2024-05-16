@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Art & Voyage
+{% endblock %}
+
+{% block body %}
+	{% for message in app.flashes('erreur') %}
+		<div class="alert bg-danger text-center text-white p-1 m-5 mt-3 mb-3 rounded ">
+			{{ message }}
+		</div>
+	{% endfor %}
+
+	<h1 class="text-center" style="color: green">Mes voyages</h1>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>NomVoyage</th>
+				<th>DateDepart</th>
+				<th>DateRetour</th>
+				<th>Destination</th>
+				<th>Prix</th>
+				<th>actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for voyage in app.user.voyages %}
+				<tr>
+					<td>{{ voyage.NomVoyage }}</td>
+					<td>{{ voyage.DateDepart ? voyage.DateDepart|date('Y-m-d') : '' }}</td>
+					<td>{{ voyage.DateRetour ? voyage.DateRetour|date('Y-m-d') : '' }}</td>
+					<td>{{ voyage.destination.nomPays }}</td>
+					<td>{{ voyage.prix }}</td>
+					<td>
+						<a class="btn btn-primary" href="{{ path('app_voyage_show', {'id': voyage.id}) }}">voir</a>
+						<a class="btn btn-success" href="{{ path('app_voyage_edit', {'id': voyage.id}) }}">éditer</a>
+					</td>
+				</tr>
+			{% else %}
+				<tr>
+					<td colspan="6">Vous avez encore rien ajouté</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+
+	<h1 class="text-center" style="color: green">Les voyages</h1>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>NomVoyage</th>
+				<th>DateDepart</th>
+				<th>DateRetour</th>
+				<th>Destination</th>
+				<th>Prix</th>
+				<th>actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for voyage in voyages %}
+				<tr>
+					<td>{{ voyage.NomVoyage }}</td>
+					<td>{{ voyage.DateDepart ? voyage.DateDepart|date('Y-m-d') : '' }}</td>
+					<td>{{ voyage.DateRetour ? voyage.DateRetour|date('Y-m-d') : '' }}</td>
+					<td>{{ voyage.destination.nomPays }}</td>
+					<td>{{ voyage.prix }}</td>
+					<td>
+						<a class="btn btn-primary" href="{{ path('app_voyage_show', {'id': voyage.id}) }}">voir</a>
+						<a class="btn btn-success" href="{{ path('app_voyage_edit', {'id': voyage.id}) }}">éditer</a>
+					</td>
+				</tr>
+			{% else %}
+				<tr>
+					<td colspan="6">Vous avez encore rien ajouté</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+	<a class="btn btn-secondary" href="{{ path('app_voyage_new') }}">Créer un nouveau voyage</a>
+{% endblock %}

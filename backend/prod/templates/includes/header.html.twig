@@ -1,0 +1,16 @@
+<a class="btn btn-warning" href="/voyages">Voyages</a>
+<a class="btn btn-warning" href="/categories">Categories</a>
+<a class="btn btn-warning" href="/destinations">Destinations</a>
+<a class="btn btn-warning" href="/users">Users</a>
+<a class="btn btn-warning" href="/logout">Deconexion</a>
+
+<p>Connecté en tant que
+	{# {{ app.user.email  ~" par "~ app.user.nom }} #}
+	{% if  is_granted  ("ROLE_ADMIN") %}
+		rôle admin
+	{% endif %}
+	,
+	{% if  is_granted  ("ROLE_EDITEUR") %}
+		rôle éditeur
+	{% endif %}
+</p>

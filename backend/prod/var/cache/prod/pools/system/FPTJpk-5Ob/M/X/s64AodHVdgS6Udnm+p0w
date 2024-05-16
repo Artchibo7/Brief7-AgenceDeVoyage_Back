@@ -1,0 +1,65 @@
+<?php //Proxies___CG___App_Entity_Destination
+
+return [PHP_INT_MAX, static fn () => \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Serializer\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Serializer\\Mapping\\ClassMetadata')),
+        clone ($p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata')),
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'Proxies\\__CG__\\App\\Entity\\Destination',
+                'lazyObjectState',
+                'lazyObjectInitialized',
+                'lazyObjectAsInitialized',
+                'id',
+                'NomPays',
+                'NomVille',
+                'image',
+                'voyages',
+                'nomPays',
+                'nomVille',
+            ],
+            'attributesMetadata' => [
+                [
+                    'lazyObjectState' => $o[1],
+                    'lazyObjectInitialized' => $o[2],
+                    'lazyObjectAsInitialized' => $o[3],
+                    'id' => $o[4],
+                    'NomPays' => $o[5],
+                    'NomVille' => $o[6],
+                    'image' => $o[7],
+                    'voyages' => $o[8],
+                    'nomPays' => $o[9],
+                    'nomVille' => $o[10],
+                ],
+            ],
+            'groups' => [
+                4 => [
+                    'api_voyage_index',
+                ],
+                [
+                    'api_voyage_index',
+                ],
+                [
+                    'api_voyage_index',
+                ],
+                [
+                    'api_voyage_index',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+)];

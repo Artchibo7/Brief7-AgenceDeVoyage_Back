@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Art & Voyage{% endblock %}
+
+{% block body %}
+    	<h1 class="text-center" style="color: green">Mes réservations</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Email</th>
+                <th>Téléphone</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for reservation in reservations %}
+            <tr>
+                <td>{{ reservation.Nom }}</td>
+                <td>{{ reservation.Prenom }}</td>
+                <td>{{ reservation.Email }}</td>
+                <td>{{ reservation.Telephone }}</td>
+                <td>
+                    <a class="btn btn-primary" href="{{ path('app_reservation_show', {'id': reservation.id}) }}">voir</a>
+                    <a class="btn btn-success" href="{{ path('app_reservation_edit', {'id': reservation.id}) }}">éditer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">Vous avez encore rien ajouté</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="btn btn-secondary" href="{{ path('app_reservation_new') }}">Créer une nouvelle</a>
+{% endblock %}

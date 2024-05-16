@@ -1,0 +1,92 @@
+<?php //App_Entity_Voyage
+
+return [PHP_INT_MAX, static fn () => \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Serializer\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Serializer\\Mapping\\ClassMetadata')),
+        clone ($p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata')),
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+        clone $p['Symfony\\Component\\Serializer\\Mapping\\AttributeMetadata'],
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'App\\Entity\\Voyage',
+                'id',
+                'NomVoyage',
+                'DateDepart',
+                'DateRetour',
+                'Description',
+                'prix',
+                'user',
+                'reservations',
+                'categorie',
+                'destination',
+                'nomVoyage',
+                'dateDepart',
+                'dateRetour',
+                'description',
+            ],
+            'attributesMetadata' => [
+                [
+                    'id' => $o[1],
+                    'NomVoyage' => $o[2],
+                    'DateDepart' => $o[3],
+                    'DateRetour' => $o[4],
+                    'Description' => $o[5],
+                    'prix' => $o[6],
+                    'user' => $o[7],
+                    'reservations' => $o[8],
+                    'categorie' => $o[9],
+                    'destination' => $o[10],
+                    'nomVoyage' => $o[11],
+                    'dateDepart' => $o[12],
+                    'dateRetour' => $o[13],
+                    'description' => $o[14],
+                ],
+            ],
+            'groups' => [
+                1 => [
+                    'api_voyage_index',
+                ],
+                [
+                    'api_voyage_index',
+                ],
+                [
+                    'api_voyage_index',
+                ],
+                [
+                    'api_voyage_index',
+                ],
+                [
+                    'api_voyage_index',
+                ],
+                [
+                    'api_voyage_index',
+                ],
+                [
+                    'api_voyage_index',
+                ],
+                9 => [
+                    'api_voyage_index',
+                ],
+                [
+                    'api_voyage_index',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+)];

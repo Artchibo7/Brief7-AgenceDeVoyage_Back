@@ -1,0 +1,193 @@
+<?php //App.Entity.Voyage
+
+return [PHP_INT_MAX, static fn () => \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        (($f = &\Symfony\Component\VarExporter\Internal\Registry::$factories)['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+        ($f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'))(),
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Validator\\Constraints\\Length'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\Length')),
+        clone ($p['Symfony\\Component\\Validator\\Constraints\\NotBlank'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\NotBlank')),
+        $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+        clone $p['Symfony\\Component\\Validator\\Constraints\\NotBlank'],
+        $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+        clone $p['Symfony\\Component\\Validator\\Constraints\\NotBlank'],
+        clone ($p['Symfony\\Component\\Validator\\Constraints\\Expression'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\Expression')),
+        $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+        clone $p['Symfony\\Component\\Validator\\Constraints\\NotBlank'],
+        clone $p['Symfony\\Component\\Validator\\Constraints\\Length'],
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'App\\Entity\\Voyage',
+                'NomVoyage',
+                4 => 'DateDepart',
+                6 => 'DateRetour',
+                9 => 'Description',
+            ],
+            'defaultGroup' => [
+                'Voyage',
+            ],
+            'members' => [
+                [
+                    'NomVoyage' => [
+                        $o[1],
+                    ],
+                    'DateDepart' => [
+                        $o[4],
+                    ],
+                    'DateRetour' => [
+                        $o[6],
+                    ],
+                    'Description' => [
+                        $o[9],
+                    ],
+                ],
+            ],
+            'properties' => [
+                [
+                    'NomVoyage' => $o[1],
+                    'DateDepart' => $o[4],
+                    'DateRetour' => $o[6],
+                    'Description' => $o[9],
+                ],
+            ],
+            'constraints' => [
+                1 => [
+                    $o[2],
+                    $o[3],
+                ],
+                4 => [
+                    $o[5],
+                ],
+                6 => [
+                    $o[7],
+                    $o[8],
+                ],
+                9 => [
+                    $o[10],
+                    $o[11],
+                ],
+            ],
+            'constraintsByGroup' => [
+                1 => [
+                    'Default' => [
+                        $o[2],
+                        $o[3],
+                    ],
+                    'Voyage' => [
+                        $o[2],
+                        $o[3],
+                    ],
+                ],
+                4 => [
+                    'Default' => [
+                        $o[5],
+                    ],
+                    'Voyage' => [
+                        $o[5],
+                    ],
+                ],
+                6 => [
+                    'Default' => [
+                        $o[7],
+                        $o[8],
+                    ],
+                    'Voyage' => [
+                        $o[7],
+                        $o[8],
+                    ],
+                ],
+                9 => [
+                    'Default' => [
+                        $o[10],
+                        $o[11],
+                    ],
+                    'Voyage' => [
+                        $o[10],
+                        $o[11],
+                    ],
+                ],
+            ],
+            'class' => [
+                1 => 'App\\Entity\\Voyage',
+                4 => 'App\\Entity\\Voyage',
+                6 => 'App\\Entity\\Voyage',
+                9 => 'App\\Entity\\Voyage',
+            ],
+            'property' => [
+                1 => 'NomVoyage',
+                4 => 'DateDepart',
+                6 => 'DateRetour',
+                9 => 'Description',
+            ],
+            'payload' => [
+                2 => null,
+                null,
+                5 => null,
+                7 => null,
+                null,
+                10 => null,
+                null,
+            ],
+            'groups' => [
+                2 => [
+                    'Default',
+                    'Voyage',
+                ],
+                [
+                    'Default',
+                    'Voyage',
+                ],
+                5 => [
+                    'Default',
+                    'Voyage',
+                ],
+                7 => [
+                    'Default',
+                    'Voyage',
+                ],
+                [
+                    'Default',
+                    'Voyage',
+                ],
+                10 => [
+                    'Default',
+                    'Voyage',
+                ],
+                [
+                    'Default',
+                    'Voyage',
+                ],
+            ],
+            'maxMessage' => [
+                2 => ' Le nom doit avoir moins de 80 caractères.',
+                11 => 'La description doit avoir moins de 255 caractères',
+            ],
+            'minMessage' => [
+                2 => 'Le nom du voyage doit comporter 2 caractères minimum.',
+                11 => 'La description doit avoir plus de 2 caractères',
+            ],
+            'max' => [
+                2 => 80,
+                11 => 255,
+            ],
+            'min' => [
+                2 => 2,
+                11 => 2,
+            ],
+            'message' => [
+                3 => 'Le champ ne peut pas être vide!',
+                5 => 'La date de départ ne peut pas être vide!',
+                7 => 'La date de retour ne peut pas être vide!',
+                'La date de retour doit etre superieure a la date de depart',
+                10 => 'Le champ ne peut pas être vide!',
+            ],
+            'expression' => [
+                8 => 'this.getDateRetour() > this.getDateDepart()',
+            ],
+        ],
+    ],
+    $o[0],
+    []
+)];

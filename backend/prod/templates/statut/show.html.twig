@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Art & Voyage{% endblock %}
+
+{% block body %}
+    <h1 class="text-center" style="color: green">Statut</h1>
+
+    <table class="table">
+        <tbody>
+            {# <tr>
+                <th>Id</th>
+                <td>{{ statut.id }}</td>
+            </tr> #}
+            <tr>
+                <th>NomStatut</th>
+                <td>{{ statut.NomStatut }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a class="btn btn-info" href="{{ path('app_statut_index') }}">retour à la liste</a>
+
+    {{ include('statut/_delete_form.html.twig') }}
+{% endblock %}

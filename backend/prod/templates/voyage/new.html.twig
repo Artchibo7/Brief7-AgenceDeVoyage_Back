@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Art & Voyage{% endblock %}
+
+{% block body %}
+    <h1 class="text-center" style="color: green">Créer un nouveau voyage</h1>
+
+    {{ include('voyage/_form.html.twig') }}
+
+
+    <a  class=" btn btn-info" href="{{ path('app_voyage_index') }}">retour à la liste</a>
+{% endblock %}

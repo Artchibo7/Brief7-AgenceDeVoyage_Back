@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Art & Voyage{% endblock %}
+
+{% block body %}
+    <h1 class="text-center" style="color: green">Editer Catégorie</h1>
+
+    {{ include('categorie/_form.html.twig', {'button_label': 'Appliquer'}) }}
+
+    <a class="btn btn-info" href="{{ path('app_categorie_index') }}">retour à la liste</a>
+
+    {{ include('categorie/_delete_form.html.twig') }}
+{% endblock %}

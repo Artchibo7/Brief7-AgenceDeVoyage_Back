@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Art & Voyage{% endblock %}
+
+{% block body %}
+	<h1 class="text-center" style="color: green">Mes catégories</h1>
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Nom Catégorie</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for categorie in categories %}
+            <tr>
+                <td>{{ categorie.Description }}</td>
+                <td>{{ categorie.NomCategorie }}</td>
+                <td>
+                    <a class="btn btn-info" href="{{ path('app_categorie_show', {'id': categorie.id}) }}">voir</a>
+                    <a class="btn btn-success" href="{{ path('app_categorie_edit', {'id': categorie.id}) }}">éditer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">Vous avez encore rien ajouté</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="btn btn-secondary" href="{{ path('app_categorie_new') }}">Créer une nouvelle catégorie</a>
+{% endblock %}

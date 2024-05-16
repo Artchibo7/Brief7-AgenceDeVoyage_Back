@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Art & Voyage{% endblock %}
+
+{% block body %}
+    <h1 class="text-center" style="color: green">Créer un nouveau statut</h1>
+
+    {{ include('statut/_form.html.twig') }}
+
+    <a class="btn btn-info" href="{{ path('app_statut_index') }}">retour à la list</a>
+{% endblock %}

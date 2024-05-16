@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Art & Voyage{% endblock %}
+
+{% block body %}
+    	<h1 class="text-center" style="color: green">Les contacts</h1>
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Email</th>
+                <th>Telephone</th>
+                <th>Message</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for contact in contacts %}
+            <tr>
+                <td>{{ contact.Nom }}</td>
+                <td>{{ contact.Prenom }}</td>
+                <td>{{ contact.Email }}</td>
+                <td>{{ contact.Telephone }}</td>
+                <td>{{ contact.Message }}</td>
+                <td>
+                    <a class="btn btn-info" href="{{ path('app_contact_show', {'id': contact.id}) }}">voir</a>
+                    <a class="btn btn-success" href="{{ path('app_contact_edit', {'id': contact.id}) }}">éditer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">Vous avez encore rien ajouté</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="btn btn-secondary" href="{{ path('app_contact_new') }}">Créer un noveau</a>
+{% endblock %}
